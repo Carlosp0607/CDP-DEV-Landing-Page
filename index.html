@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Daniel Polanco — Portafolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:          #f2eee3;
+    --panel:       #ffffff;
+    --line:        #d8cfb8;
+    --border:      #9fb2c4;
+    --ink:         #17293f;
+    --ink-dim:     #5b6b7d;
+    --amber:       #e2670c;
+    --amber-dim:   #b8530a;
+    --ok:          #1f7a4d;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.5;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 34px 34px;
+    background-position: -1px -1px;
+  }
+
+  a{ color:inherit; }
+
+  .mono{ font-family:'IBM Plex Mono', monospace; }
+
+  .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--amber);
+  }
+
+  /* ---------- layout shell ---------- */
+  .wrap{ max-width:1040px; margin:0 auto; padding:0 28px; }
+
+  header.top{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:22px 28px;
+    border-bottom:1px solid rgba(23,41,63,0.1);
+    position:sticky; top:0; z-index:20;
+    background:rgba(242,238,227,0.88);
+    backdrop-filter:blur(6px);
+  }
+  header.top .mark{ font-family:'IBM Plex Mono', monospace; font-weight:700; letter-spacing:0.05em; font-size:0.95rem; }
+  header.top .mark span{ color:var(--amber); }
+  header.top nav{ display:flex; gap:26px; font-family:'IBM Plex Mono', monospace; font-size:0.78rem; }
+  header.top nav a{ text-decoration:none; opacity:0.75; transition:opacity .2s; }
+  header.top nav a:hover, header.top nav a:focus-visible{ opacity:1; color:var(--amber); }
+  header.top nav a:focus-visible{ outline:1px dashed var(--amber); outline-offset:4px; }
+
+  /* ---------- hero / title block ---------- */
+  .hero{ padding:96px 0 70px; }
+  .hero .eyebrow{ margin-bottom:18px; }
+  .hero h1{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:700;
+    font-size:clamp(2.1rem, 5vw, 3.6rem);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    max-width:820px;
+  }
+  .hero h1 em{ font-style:normal; color:var(--amber); }
+  .hero p.sub{
+    margin-top:22px;
+    max-width:560px;
+    color:var(--ink-dim);
+    font-size:1.02rem;
+  }
+  .hero .actions{ margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; }
+
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:12px 20px;
+    border:1px solid var(--amber);
+    color:var(--ink);
+    transition:background .2s, color .2s;
+    display:inline-block;
+  }
+  .btn.solid{ background:var(--amber); color:var(--bg); font-weight:600; }
+  .btn:hover, .btn:focus-visible{ background:var(--amber); color:var(--bg); }
+  .btn:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+
+  /* title-block strip, like the corner stamp on a technical drawing */
+  .titleblock{
+    margin-top:64px;
+    border:1px solid var(--border);
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .titleblock div{
+    padding:14px 18px;
+    border-right:1px solid var(--border);
+  }
+  .titleblock div:last-child{ border-right:none; }
+  .titleblock .k{ font-family:'IBM Plex Mono',monospace; font-size:0.65rem; letter-spacing:0.14em; color:var(--ink-dim); text-transform:uppercase; }
+  .titleblock .v{ font-family:'IBM Plex Mono',monospace; font-size:0.88rem; margin-top:6px; color:var(--ink); }
+
+  /* ---------- section headers ---------- */
+  .section{ padding:70px 0; border-top:1px solid rgba(23,41,63,0.1); }
+  .section .section-head{
+    display:flex; align-items:baseline; gap:16px; margin-bottom:44px;
+  }
+  .section .section-head .num{ font-family:'IBM Plex Mono',monospace; color:var(--amber); font-size:0.85rem; }
+  .section .section-head h2{ font-family:'IBM Plex Mono',monospace; font-size:1.5rem; letter-spacing:-0.01em; }
+  .section .section-head .rule{ flex:1; height:1px; background:var(--border); }
+
+  /* ---------- project cards: spec sheets ---------- */
+  .projects{ display:flex; flex-direction:column; gap:22px; }
+
+  .spec{
+    border:1px solid var(--border);
+    position:relative;
+    background:var(--panel);
+    transition:border-color .2s, background .2s;
+  }
+  .spec:hover{ border-color:var(--amber); background:rgba(217,164,65,0.04); }
+
+  .spec::before, .spec::after,
+  .spec .corner-b::before, .spec .corner-b::after{
+    content:''; position:absolute; width:10px; height:10px;
+    border:1px solid var(--amber); opacity:0.8;
+  }
+  .spec::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
+  .spec::after{ top:-1px; right:-1px; border-left:none; border-bottom:none; }
+
+  .spec-inner{ padding:26px 26px 22px; }
+
+  .spec-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap;
+    margin-bottom:14px;
+  }
+  .spec-top h3{ font-family:'IBM Plex Mono',monospace; font-size:1.15rem; }
+  .status{
+    font-family:'IBM Plex Mono',monospace; font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase;
+    padding:4px 10px; border:1px solid currentColor; white-space:nowrap;
+  }
+  .status.live{ color:var(--ok); }
+  .status.demo{ color:var(--amber); }
+  .status.build{ color:var(--ink-dim); }
+
+  .spec p.desc{ color:var(--ink-dim); max-width:640px; font-size:0.94rem; }
+
+  .spec-meta{
+    display:flex; gap:22px; flex-wrap:wrap; margin-top:18px;
+    padding-top:16px; border-top:1px dashed rgba(23,41,63,0.18);
+  }
+  .spec-meta .m .k{ font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.12em; color:var(--ink-dim); text-transform:uppercase; }
+  .spec-meta .m .v{ font-family:'IBM Plex Mono',monospace; font-size:0.82rem; margin-top:4px; }
+  .spec-meta .links{ margin-left:auto; display:flex; gap:16px; align-self:center; }
+  .spec-meta .links a{ font-family:'IBM Plex Mono',monospace; font-size:0.78rem; text-decoration:none; border-bottom:1px solid var(--amber); color:var(--amber); }
+  .spec-meta .links a:hover, .spec-meta .links a:focus-visible{ color:var(--ink); border-color:var(--ink); }
+  .spec-meta .links a:focus-visible{ outline:1px dashed var(--amber); outline-offset:3px; }
+
+  /* ---------- stack section ---------- */
+  .stackgrid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:var(--border); border:1px solid var(--border);
+  }
+  @media (max-width:640px){
+    .stackgrid{ grid-template-columns:repeat(2, 1fr); }
+  }
+  .stackgrid .cell{ background:var(--bg); padding:20px; }
+  .stackgrid .cell .k{ display:block; margin-bottom:10px; }
+  .stackgrid .cell .v{ font-family:'IBM Plex Mono',monospace; font-size:0.86rem; color:var(--ink-dim); line-height:1.7; }
+
+  /* ---------- contact / footer ---------- */
+  footer{
+    padding:70px 0 50px; border-top:1px solid rgba(23,41,63,0.1);
+  }
+  footer h2{ font-family:'IBM Plex Mono',monospace; font-size:1.6rem; max-width:520px; }
+  footer .contact-row{ display:flex; gap:28px; flex-wrap:wrap; margin-top:30px; }
+  footer .contact-row a{
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem; text-decoration:none;
+    padding:10px 0; border-bottom:1px solid transparent;
+  }
+  footer .contact-row a:hover, footer .contact-row a:focus-visible{ border-color:var(--amber); color:var(--amber); }
+  footer .contact-row a:focus-visible{ outline:1px dashed var(--amber); outline-offset:4px; }
+  footer .fine{ margin-top:56px; color:var(--ink-dim); font-size:0.74rem; font-family:'IBM Plex Mono',monospace; }
+
+  @media (max-width:640px){
+    .titleblock{ grid-template-columns:repeat(2,1fr); }
+    .titleblock div:nth-child(2){ border-right:none; }
+    header.top nav{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .spec, .btn, header.top nav a{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="mark">CDP<span>_/</span>DEV</div>
+  <nav>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#stack">Stack</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="label eyebrow">FICHA TÉCNICA — DESARROLLADOR</div>
+    <h1>Construyo sistemas que <em>operan</em> negocios reales: casos legales, salud rural, control de acceso.</h1>
+    <p class="sub">Carlos Daniel Polanco — Desarrollador Full-Stack en Colombia. Backend en Python y Node, frontend en React, bases de datos relacionales, y despliegue en producción de principio a fin.</p>
+    <div class="actions">
+      <a class="btn solid" href="#proyectos">Ver proyectos</a>
+      <a class="btn" href="https://github.com/Carlosp0607" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="mailto:carlosdanielpolanco0@gmail.com">Escribir correo</a>
+    </div>
+
+    <div class="titleblock">
+      <div><div class="k">Base</div><div class="v">Colombia</div></div>
+      <div><div class="k">Enfoque</div><div class="v">Full-Stack</div></div>
+      <div><div class="k">Proyectos activos</div><div class="v">6</div></div>
+      <div><div class="k">Disponibilidad</div><div class="v">Full-time / Freelance</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="proyectos">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2>Proyectos</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="projects">
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>Sistema de Gestión Legal — LexDoc</h3>
+            <span class="status demo">Demo pública</span>
+          </div>
+          <p class="desc">Plataforma para la gestión de casos y documentos de un despacho de abogados. Control de roles diferenciado — administrador, jefe de firma y abogados — con asignación de casos y alertas de vencimiento de plazos.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">Python · Flask · PostgreSQL</div></div>
+            <div class="m"><div class="k">Rol</div><div class="v">Desarrollo completo</div></div>
+            <div class="links">
+              <a href="https://lexdoc.onrender.com" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Carlosp0607/lexdoc" target="_blank" rel="noopener">Código ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>MediAssist Rural</h3>
+            <span class="status live">En producción</span>
+          </div>
+          <p class="desc">Asistente de salud con IA orientado a zonas rurales de Colombia. Orienta al usuario sobre síntomas mediante consulta interactiva y activa alertas de emergencia cuando detecta un síntoma crítico.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">React · Node.js · IA</div></div>
+            <div class="m"><div class="k">Rol</div><div class="v">Desarrollo completo</div></div>
+            <div class="links">
+              <a href="https://mediassist-rural.vercel.app" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Carlosp0607/mediassist-rural" target="_blank" rel="noopener">Código ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>Sistema de Control para Piscina</h3>
+            <span class="status live">En producción</span>
+          </div>
+          <p class="desc">Aplicación de control de acceso y operación para conjuntos con piscina. El administrador gestiona miembros, asistencia, historial y caja; el portero opera solo el registro de entradas.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">Node.js · PostgreSQL</div></div>
+            <div class="m"><div class="k">Rol</div><div class="v">Desarrollo completo</div></div>
+            <div class="links">
+              <a href="https://piscina-app.vercel.app" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Carlosp0607/piscina-app" target="_blank" rel="noopener">Código ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>Chatbot con Inteligencia Artificial</h3>
+            <span class="status live">En producción</span>
+          </div>
+          <p class="desc">Aplicación web de chat en tiempo real que responde utilizando un modelo de inteligencia artificial, con interfaz de conversación fluida.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">React · JavaScript</div></div>
+            <div class="links">
+              <a href="https://chatbot-crud.vercel.app" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Carlosp0607/chatbot-crud" target="_blank" rel="noopener">Código ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>Clasificador de Spam</h3>
+            <span class="status live">En producción</span>
+          </div>
+          <p class="desc">Modelo de Machine Learning para clasificación de mensajes spam vs. no spam, con limpieza de texto, vectorización TF-IDF y clasificación mediante Naive Bayes. Precisión validada de ~98%.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">Python · Scikit-learn · NLP</div></div>
+            <div class="links">
+              <a href="https://huggingface.co/spaces/carlosp0607/Clasificador-spam" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Carlosp0607/taller5" target="_blank" rel="noopener">Código ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="spec">
+        <div class="spec-inner">
+          <div class="spec-top">
+            <h3>TranscriptoHub</h3>
+            <span class="status build">Proyecto de grado</span>
+          </div>
+          <p class="desc">Software de escritorio que automatiza un flujo de trabajo bioinformático (Trimmomatic, FastQC, SortMeRNA, Kraken2) para el análisis de secuencias de ARN, apoyando la identificación de indicadores de carcinoma escamocelular oral.</p>
+          <div class="spec-meta">
+            <div class="m"><div class="k">Stack</div><div class="v">Python · PyQt · WSL</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2>Stack técnico</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="stackgrid">
+      <div class="cell"><span class="label k">Lenguajes</span><div class="v">JavaScript<br>Python</div></div>
+      <div class="cell"><span class="label k">Frontend</span><div class="v">React<br>HTML5 / CSS3</div></div>
+      <div class="cell"><span class="label k">Backend</span><div class="v">Node.js<br>Flask · APIs REST</div></div>
+      <div class="cell"><span class="label k">Datos</span><div class="v">PostgreSQL<br>MySQL</div></div>
+      <div class="cell"><span class="label k">IA / ML</span><div class="v">Scikit-learn<br>NLP</div></div>
+      <div class="cell"><span class="label k">Infra</span><div class="v">Git / GitHub<br>Render · Vercel</div></div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <span class="label">03 — Contacto</span>
+    <h2 style="margin-top:16px;">¿Tu equipo necesita un desarrollador full-stack? Conversemos.</h2>
+    <div class="contact-row">
+      <a href="mailto:carlosdanielpolanco0@gmail.com">carlosdanielpolanco0@gmail.com ↗</a>
+      <a href="tel:+573142723087">+57 314 272 3087</a>
+      <a href="https://github.com/Carlosp0607" target="_blank" rel="noopener">github.com/Carlosp0607 ↗</a>
+      <a href="https://www.linkedin.com/in/carlos-daniel-polanco-930115328" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="fine">CARLOS DANIEL POLANCO TURIZO — COLOMBIA</div>
+  </footer>
+
+</main>
+
+</body>
+</html>
