@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carlos Daniel Polanco — Ingeniero de Software</title>
-<meta name="description" content="Portafolio de Carlos Daniel Polanco, Ingeniero de Software en Bogotá. Backend en Python y Node.js, bases de datos relacionales y despliegue en producción.">
+<title>Carlos Daniel Polanco — Desarrollador Fullstack Junior</title>
+<meta name="description" content="Portafolio de Carlos Daniel Polanco, desarrollador fullstack en Bogotá. React, Flask y Express sobre PostgreSQL y MySQL, con pruebas automatizadas, Docker y despliegue continuo.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -161,7 +161,7 @@
     <div class="dots"><i></i><i></i><i></i></div>
     <div class="prompt">$ whoami</div>
     <h1>Construyo sistemas que <b>operan</b> negocios reales: casos legales, parqueaderos, salud rural.</h1>
-    <p class="sub">Carlos Daniel Polanco — Ingeniero de Software en Bogotá. Backend en Python y Node.js, bases de datos relacionales, integración de APIs de IA y despliegue en producción de principio a fin.</p>
+    <p class="sub">Carlos Daniel Polanco — Desarrollador fullstack en Bogotá. Interfaces en React y APIs REST con Flask y Express, sobre PostgreSQL y MySQL. Autenticación JWT, pruebas automatizadas, contenedores Docker y despliegue continuo.</p>
 
     <div class="btns">
       <a class="on" href="#proyectos">Ver proyectos</a>
@@ -172,9 +172,9 @@
 
     <div class="meta">
       <div><div class="k">Base</div><div class="v">Bogotá, Colombia</div></div>
-      <div><div class="k">Enfoque</div><div class="v">Backend / Web</div></div>
+      <div><div class="k">Enfoque</div><div class="v">Fullstack / Web</div></div>
       <div><div class="k">Formación</div><div class="v">Ing. de Software</div></div>
-      <div><div class="k">Disponibilidad</div><div class="v">Full-time / Freelance</div></div>
+      <div><div class="k">Disponibilidad</div><div class="v">Tiempo completo</div></div>
     </div>
   </section>
 
@@ -188,10 +188,10 @@
           <h3>LexDoc — Sistema de gestión legal</h3>
           <span class="st">proyecto para cliente</span>
         </div>
-        <p>Plataforma para la gestión de casos y documentos de un despacho jurídico, desarrollada bajo contrato de prestación de servicios para Turizo Lawyers Enterprise S.A. Tres perfiles con permisos diferenciados — administrador, jefe de firma y abogado — donde cada abogado accede únicamente a los casos que le fueron asignados. Incluye carga de documentos y alertas de vencimiento de plazos procesales.</p>
+        <p>Plataforma para la gestión de casos y documentos de un despacho jurídico, desarrollada bajo contrato de prestación de servicios para Turizo Lawyers Enterprise S.A. Tres perfiles con permisos diferenciados — administrador, jefe de firma y abogado — donde cada abogado accede únicamente a los casos que le fueron asignados. Incluye carga de documentos y alertas automáticas por correo antes del vencimiento de plazos procesales. El aislamiento entre abogados está cubierto por pruebas automatizadas en pytest.</p>
         <p class="nota">La demo enlazada usa datos ficticios.</p>
         <div class="foot">
-          <b>Python</b><b>Flask</b><b>PostgreSQL</b><b>Render</b>
+          <b>Python</b><b>Flask</b><b>PostgreSQL</b><b>pytest</b><b>Docker</b><b>Render</b>
           <span class="lk">
             <a href="https://lexdoc.onrender.com" target="_blank" rel="noopener">demo con datos de prueba ↗</a>
             <a href="https://github.com/Carlosp0607/lexdoc" target="_blank" rel="noopener">código ↗</a>
@@ -204,9 +204,9 @@
           <h3>ParkSystem — SaaS para parqueaderos</h3>
           <span class="st demo">demo pública</span>
         </div>
-        <p>Sistema multi-empresa para la operación diaria de parqueaderos. Varias empresas cliente trabajan sobre la misma base de datos con aislamiento total de su información: ninguna consulta devuelve registros de otra empresa. Cubre ingreso y salida de vehículos con cálculo de tarifa, turnos de caja con conciliación por método de pago, mensualidades, reportes exportables a Excel y respaldos automáticos de la base de datos.</p>
+        <p>Sistema multi-empresa para la operación diaria de parqueaderos. Varias empresas cliente trabajan sobre la misma base de datos con aislamiento total de su información: ninguna consulta devuelve registros de otra empresa. Cubre ingreso y salida de vehículos con cálculo de tarifa, turnos de caja con conciliación por método de pago, mensualidades, reportes exportables a Excel y respaldos automáticos con GitHub Actions. El cobro se ejecuta dentro de una transacción SQL con reversión automática, y el aislamiento entre empresas está cubierto por pruebas automatizadas.</p>
         <div class="foot">
-          <b>Node.js</b><b>Express</b><b>MySQL</b><b>Render</b>
+          <b>Node.js</b><b>Express</b><b>MySQL</b><b>JWT</b><b>Docker</b><b>Render</b>
           <span class="lk">
             <a href="https://parqueadero-app-zbj3.onrender.com" target="_blank" rel="noopener">demo ↗</a>
             <a href="https://github.com/Carlosp0607/parqueadero-app" target="_blank" rel="noopener">código ↗</a>
@@ -219,9 +219,9 @@
           <h3>MediAssist Rural</h3>
           <span class="st">en producción</span>
         </div>
-        <p>Asistente de orientación en salud para zonas con poco acceso médico. Conectado a un modelo de lenguaje mediante la API de OpenRouter, ajusta sus respuestas a la edad, síntomas y antecedentes que entrega el paciente, y muestra una alerta con la línea de emergencias 123 cuando detecta un síntoma crítico.</p>
+        <p>Asistente de orientación en salud para zonas con poco acceso médico, presentado al Gemma 4 Good Hackathon de Kaggle. Conectado a un modelo de lenguaje mediante la API de OpenRouter, ajusta sus respuestas a la edad, síntomas y antecedentes que entrega el paciente, y muestra una alerta con la línea de emergencias 123 cuando detecta un síntoma crítico.</p>
         <div class="foot">
-          <b>JavaScript</b><b>OpenRouter</b><b>Vercel</b>
+          <b>React</b><b>JavaScript</b><b>OpenRouter</b><b>Vercel</b>
           <span class="lk">
             <a href="https://mediassist-rural.vercel.app" target="_blank" rel="noopener">demo ↗</a>
             <a href="https://github.com/Carlosp0607/mediassist-rural" target="_blank" rel="noopener">código ↗</a>
@@ -264,9 +264,10 @@
     <div class="stack">
       <div class="cell"><div class="k">Lenguajes</div><div class="v">Python<br>JavaScript</div></div>
       <div class="cell"><div class="k">Backend</div><div class="v">Flask (Python)<br>Express (Node.js)</div></div>
-      <div class="cell"><div class="k">Frontend</div><div class="v">HTML5 / CSS3<br>JavaScript</div></div>
+      <div class="cell"><div class="k">Frontend</div><div class="v">React<br>HTML5 / CSS3</div></div>
       <div class="cell"><div class="k">Datos</div><div class="v">PostgreSQL<br>MySQL</div></div>
       <div class="cell"><div class="k">Inteligencia artificial</div><div class="v">APIs de LLM<br>OpenRouter</div></div>
+      <div class="cell"><div class="k">Pruebas y contenedores</div><div class="v">pytest · node:test<br>Docker · Docker Compose</div></div>
       <div class="cell"><div class="k">Infraestructura</div><div class="v">Git / GitHub · Actions<br>Render · Vercel</div></div>
     </div>
   </section>
