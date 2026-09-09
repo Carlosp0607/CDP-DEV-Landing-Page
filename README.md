@@ -1,6 +1,6 @@
 # CDP DEV — Landing Page
 
-Portafolio personal de Carlos Daniel Polanco Turizo, Ingeniero de Software. Reúne los proyectos desplegados, el stack y las vías de contacto en una sola página.
+Portafolio personal de Carlos Daniel Polanco Turizo, desarrollador fullstack. Reúne los proyectos desplegados, el stack y las vías de contacto en una sola página.
 
 **En línea:** [cdp-dev-landing-page.vercel.app](https://cdp-dev-landing-page.vercel.app)
 
@@ -8,7 +8,7 @@ Portafolio personal de Carlos Daniel Polanco Turizo, Ingeniero de Software. Reú
 
 ## Qué contiene
 
-- Perfil profesional y stack técnico.
+- Perfil profesional y stack técnico: React, Flask, Express, PostgreSQL, MySQL, Docker y pruebas automatizadas.
 - Cinco proyectos, cada uno con enlace al repositorio y a la demo en funcionamiento.
 - Descarga directa de la hoja de vida en PDF.
 - Contacto: correo, GitHub y LinkedIn.
@@ -19,9 +19,9 @@ Portafolio personal de Carlos Daniel Polanco Turizo, Ingeniero de Software. Reú
 
 | Proyecto | Descripción | Demo |
 |---|---|---|
-| **LexDoc** | Gestión de casos jurídicos con control de acceso por roles | [lexdoc.onrender.com](https://lexdoc.onrender.com) |
-| **ParkSystem** | SaaS multi-tenant para parqueaderos | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
-| **MediAssist Rural** | Orientación en salud con IA para zonas rurales | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
+| **LexDoc** | Gestión de casos jurídicos con control de acceso por roles, alertas por correo y pruebas en pytest | [lexdoc.onrender.com](https://lexdoc.onrender.com) |
+| **ParkSystem** | SaaS multi-tenant para parqueaderos, con JWT, transacciones SQL y Docker | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
+| **MediAssist Rural** | Orientación en salud con IA, presentado al Gemma 4 Good Hackathon de Kaggle | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
 | **Sistema de piscina** | Control de acceso y pagos para clubes acuáticos | [piscina-app.vercel.app](https://piscina-app.vercel.app) |
 | **TranscriptoHub** | Procesamiento de secuencias de ARN en Python | Proyecto de grado |
 
