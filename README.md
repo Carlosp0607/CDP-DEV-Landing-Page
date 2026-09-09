@@ -20,8 +20,8 @@ Portafolio personal de Carlos Daniel Polanco Turizo, desarrollador fullstack. Re
 | Proyecto | Descripción | Demo |
 |---|---|---|
 | **LexDoc** | Gestión de casos jurídicos con control de acceso por roles, alertas por correo y pruebas en pytest | [lexdoc.onrender.com](https://lexdoc.onrender.com) |
-| **ParkSystem** | SaaS multi-tenant para parqueaderos, con JWT, transacciones SQL y Docker | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
-| **MediAssist Rural** | Orientación en salud con IA, presentado al Gemma 4 Good Hackathon de Kaggle | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
+| **Don Parqueo** | SaaS multi-tenant para parqueaderos, con JWT, transacciones SQL y Docker | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
+| **MediAssist Rural** | Orientación en salud con IA, presentado al Gemma 4 Good Hackathon de Google DeepMind | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
 | **Sistema de piscina** | Control de acceso y pagos para clubes acuáticos | [piscina-app.vercel.app](https://piscina-app.vercel.app) |
 | **TranscriptoHub** | Procesamiento de secuencias de ARN en Python | Proyecto de grado |
 
@@ -72,4 +72,4 @@ CV_Carlos_Polanco.pdf    Hoja de vida enlazada desde el boton de descarga
 
 - **Correo:** carlosdanielpolanco0@gmail.com
 - **GitHub:** [Carlosp0607](https://github.com/Carlosp0607)
-- **LinkedIn:** [carlos-daniel-polanco](https://www.linkedin.com/in/carlos-daniel-polanco-930115328)
+- **LinkedIn:** [carlosdanielpolanco](https://www.linkedin.com/in/carlosdanielpolanco)
