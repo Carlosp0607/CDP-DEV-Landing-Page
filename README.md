@@ -63,7 +63,7 @@ python -m http.server 8000
 
 ```
 index.html               Página completa: estructura, estilos y contenido
-CV_Carlos_Polanco.pdf    Hoja de vida enlazada desde el boton de descarga
+CV_Carlos_Daniel_Polanco.pdf    Hoja de vida enlazada desde el boton de descarga
 ```
 
 ---
