@@ -1,33 +1,27 @@
-# CDP DEV — Landing Page
+# Carlos Daniel Polanco | Portafolio
 
-Portafolio personal de Carlos Daniel Polanco Turizo, desarrollador fullstack. Reúne los proyectos desplegados, el stack y las vías de contacto en una sola página.
+Soy desarrollador backend Python. En esta página reúno mis proyectos desplegados, mi stack y mis datos de contacto.
 
-**En línea:** [cdp-dev-landing-page.vercel.app](https://cdp-dev-landing-page.vercel.app)
-
----
+En línea: [carlosdanielportafolio.vercel.app](https://carlosdanielportafolio.vercel.app)
 
 ## Qué contiene
 
-- Perfil profesional y stack técnico: React, Flask, Express, PostgreSQL, MySQL, Docker y pruebas automatizadas.
-- Cinco proyectos, cada uno con enlace al repositorio y a la demo en funcionamiento.
-- Descarga directa de la hoja de vida en PDF.
+- Mi perfil profesional y stack técnico: Python, Flask, API REST, PostgreSQL, pytest e integración de modelos de lenguaje por API.
+- Cinco proyectos, cada uno con enlace al repositorio y a su demo en vivo.
+- Descarga directa de mi hoja de vida en PDF.
 - Contacto: correo, GitHub y LinkedIn.
-
----
 
 ## Proyectos enlazados
 
 | Proyecto | Descripción | Demo |
 |---|---|---|
-| **LexDoc** | Gestión de casos jurídicos con control de acceso por roles, alertas por correo y pruebas en pytest | [lexdoc.onrender.com](https://lexdoc.onrender.com) |
-| **Don Parqueo** | SaaS multi-tenant para parqueaderos, con JWT, transacciones SQL y Docker | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
-| **MediAssist Rural** | Orientación en salud con IA, presentado al Gemma 4 Good Hackathon de Google DeepMind | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
-| **Sistema de piscina** | Control de acceso y pagos para clubes acuáticos | [piscina-app.vercel.app](https://piscina-app.vercel.app) |
-| **TranscriptoHub** | Procesamiento de secuencias de ARN en Python | Proyecto de grado |
+| LexDoc | Gestión de casos jurídicos con control de acceso por roles, alertas por correo y pruebas en pytest. Desarrollado por prestación de servicios | [lexdoc.onrender.com](https://lexdoc.onrender.com) |
+| Don Parqueo | SaaS multi-empresa para parqueaderos, con aislamiento de datos por empresa y cobro en transacción SQL | [parqueadero-app-zbj3.onrender.com](https://parqueadero-app-zbj3.onrender.com) |
+| MediAssist Rural | Orientación en salud con modelos de lenguaje, presentado al Gemma 4 Good Hackathon de Google DeepMind | [mediassist-rural.vercel.app](https://mediassist-rural.vercel.app) |
+| Sistema de piscina | Control de acceso y pagos para clubes acuáticos | [piscina-app.vercel.app](https://piscina-app.vercel.app) |
+| TranscriptoHub | Procesamiento de secuencias de ARN en Python | Proyecto de grado |
 
----
-
-## Stack
+## Stack del sitio
 
 Sitio estático de un solo archivo. Sin framework, sin dependencias, sin paso de build.
 
@@ -38,38 +32,15 @@ Sitio estático de un solo archivo. Sin framework, sin dependencias, sin paso de
 | Tipografía | IBM Plex Mono |
 | Despliegue | Vercel |
 
-La decisión de mantenerlo en un archivo es deliberada: una página de portafolio no necesita build ni dependencias, y así carga de inmediato y no se rompe con el tiempo.
-
----
-
-## Ejecución local
-
-No requiere instalación. Basta con abrir el archivo:
-
-```bash
-git clone https://github.com/Carlosp0607/CDP-DEV-Landing-Page.git
-cd CDP-DEV-Landing-Page
-```
-
-Abre `index.html` en el navegador, o levanta un servidor si prefieres:
-
-```bash
-python -m http.server 8000
-```
-
----
-
 ## Estructura
 
 ```
-index.html               Página completa: estructura, estilos y contenido
-CV_Carlos_Daniel_Polanco.pdf    Hoja de vida enlazada desde el boton de descarga
+index.html                  Página completa: estructura, estilos y contenido
+CV_CarlosDanielPolanco.pdf  Hoja de vida enlazada desde el botón de descarga
 ```
-
----
 
 ## Contacto
 
-- **Correo:** carlosdanielpolanco0@gmail.com
-- **GitHub:** [Carlosp0607](https://github.com/Carlosp0607)
-- **LinkedIn:** [carlosdanielpolanco](https://www.linkedin.com/in/carlosdanielpolanco)
+- Correo: carlosdanielpolanco0@gmail.com
+- GitHub: [Carlosp0607](https://github.com/Carlosp0607)
+- LinkedIn: [carlosdanielpolanco](https://www.linkedin.com/in/carlosdanielpolanco)
